@@ -1,15 +1,28 @@
+
 <!DOCTYPE html>
+
 <html>
+
 <head>
-  <meta charset="utf-8">
+   <style>
+          td, th {
+            border: 0px solid black;
+              
+         }
+         img{
+   padding: 5px;
+
+}
+      </style>
+<!--   <meta charset="utf-8">
   <meta name="description"
         content="Deformable Neural Radiance Fields creates free-viewpoint portraits (nerfies) from casually captured videos.">
   <meta name="keywords" content="Nerfies, D-NeRF, NeRF">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Nerfies: Deformable Neural Radiance Fields</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+  <title>Interactive Portrait Harmonization</title>
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+ <!--  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
 
@@ -23,7 +36,7 @@
 
 
 
-  </script>
+  </script> -->
 
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
         rel="stylesheet">
@@ -36,14 +49,19 @@
         href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   <link rel="stylesheet" href="./static/css/index.css">
   <link rel="icon" href="./static/images/favicon.svg">
+  <link rel="stylesheet" href="https://unpkg.com/image-compare-viewer/dist/image-compare-viewer.min.css">
+  <link rel="stylesheet" href="css/app.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
 
+<script src="https://unpkg.com/image-compare-viewer/dist/image-compare-viewer.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script defer src="./static/js/fontawesome.all.min.js"></script>
   <script src="./static/js/bulma-carousel.min.js"></script>
   <script src="./static/js/bulma-slider.min.js"></script>
   <script src="./static/js/index.js"></script>
+
 </head>
-<body>
+<!-- <body>
 
 <nav class="navbar" role="navigation" aria-label="main navigation">
   <div class="navbar-brand">
@@ -83,7 +101,7 @@
     </div>
 
   </div>
-</nav>
+</nav> -->
 
 
 <section class="hero">
@@ -91,39 +109,48 @@
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column has-text-centered">
-          <h1 class="title is-1 publication-title">Nerfies: Deformable Neural Radiance Fields</h1>
+          <h1 class="title is-1 publication-title">Interactive Portrait Harmonization</h1>
           <div class="is-size-5 publication-authors">
             <span class="author-block">
-              <a href="https://keunhong.com">Keunhong Park</a><sup>1</sup>,</span>
+              <a href="https://jeya-maria-jose.github.io/research">Jeya Maria Jose Valanarasu</a><sup>1</sup>,</span>
             <span class="author-block">
-              <a href="https://utkarshsinha.com">Utkarsh Sinha</a><sup>2</sup>,</span>
+              <a href="https://sites.google.com/site/hezhangsprinter/">He Zhang</a><sup>2</sup>,</span>
             <span class="author-block">
-              <a href="https://jonbarron.info">Jonathan T. Barron</a><sup>2</sup>,
+              <a href="https://jimmie33.github.io/">Jianming Zhang</a><sup>2</sup>,
             </span>
             <span class="author-block">
-              <a href="http://sofienbouaziz.com">Sofien Bouaziz</a><sup>2</sup>,
+              <a href="https://yilinwang.org/">Yilin Wang</a><sup>2</sup>,
             </span>
             <span class="author-block">
-              <a href="https://www.danbgoldman.com">Dan B Goldman</a><sup>2</sup>,
+              <a href="https://research.adobe.com/person/zhe-lin/"> Zhe Lin</a><sup>2</sup>,
             </span>
             <span class="author-block">
-              <a href="https://homes.cs.washington.edu/~seitz/">Steven M. Seitz</a><sup>1,2</sup>,
+              <a href="https://research.adobe.com/person/jose-echevarria/">Jose Echevarria</a><sup>2</sup>,
             </span>
             <span class="author-block">
-              <a href="http://www.ricardomartinbrualla.com">Ricardo Martin-Brualla</a><sup>2</sup>
+              <a href="https://www.linkedin.com/in/yinglan-ma/">Yinglan Ma</a><sup>2</sup>
+            </span>
+            <span class="author-block">
+              <a href="http://www.zijunwei.org/">Zijun Wei</a><sup>2</sup>
+            </span>
+            <span class="author-block">
+              <a href="http://www.kalyans.org/">Kalyan Sunkavalli</a><sup>2</sup>
+            </span>
+            <span class="author-block">
+              <a href="https://engineering.jhu.edu/vpatel36/sciencex_teams/vishalpatel/">Vishal M. Patel</a><sup>1</sup>
             </span>
           </div>
 
           <div class="is-size-5 publication-authors">
-            <span class="author-block"><sup>1</sup>University of Washington,</span>
-            <span class="author-block"><sup>2</sup>Google Research</span>
+            <span class="author-block"><sup>1</sup>Johns Hopkins University,</span>
+            <span class="author-block"><sup>2</sup>Adobe Research</span>
           </div>
 
           <div class="column has-text-centered">
             <div class="publication-links">
               <!-- PDF Link. -->
               <span class="link-block">
-                <a href="https://arxiv.org/pdf/2011.12948"
+                <a href="tba"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fas fa-file-pdf"></i>
@@ -132,7 +159,7 @@
                 </a>
               </span>
               <span class="link-block">
-                <a href="https://arxiv.org/abs/2011.12948"
+                <a href="tba"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="ai ai-arxiv"></i>
@@ -141,7 +168,7 @@
                 </a>
               </span>
               <!-- Video Link. -->
-              <span class="link-block">
+             <!--  <span class="link-block">
                 <a href="https://www.youtube.com/watch?v=MrKrnHhk8IA"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
@@ -149,10 +176,10 @@
                   </span>
                   <span>Video</span>
                 </a>
-              </span>
+              </span> -->
               <!-- Code Link. -->
               <span class="link-block">
-                <a href="https://github.com/google/nerfies"
+                <a href="https://github.com/jeya-maria-jose/Interactive-Portrait-Harmonization"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fab fa-github"></i>
@@ -161,13 +188,13 @@
                   </a>
               </span>
               <!-- Dataset Link. -->
-              <span class="link-block">
+        <!--       <span class="link-block">
                 <a href="https://github.com/google/nerfies/releases/tag/0.1"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="far fa-images"></i>
                   </span>
-                  <span>Data</span>
+                  <span>Data</span> -->
                   </a>
             </div>
 
@@ -178,13 +205,10 @@
   </div>
 </section>
 
-<section class="hero teaser">
+<!-- <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
-      <video id="teaser" autoplay muted loop height="100%">
-        <source src="https://homes.cs.washington.edu/~kpar/nerfies/videos/teaser.mp4"
-                type="video/mp4">
-      </video>
+      <img class="round" style="width:1500px" src="./static/images/iph_web.png"/>
       <h2 class="subtitle has-text-centered">
         <span class="dnerf">Nerfies</span> turns selfie videos from your phone into
         free-viewpoint
@@ -193,8 +217,52 @@
     </div>
   </div>
 </section>
+ -->
+<!-- <table border="1" id="cssTable">
+    <tr>
+        <td>Text</td>
+        <td>Text</td>
+    </tr>
+</table> -->
+<table border="0" bordercolor="red" align="center">
+<!--     <tr>
+        <th colspan="4">ABCD</th> 
+    </tr> -->
+    <tr>
+      <td style="text-align:center">Composite Image</td>
+      <td style="text-align:center">Mask</td>
+      <td style="text-align:center">Generic Harmonization</td>
+      <td style="text-align:center">Interactive Harmonization</td>
 
+    </tr>
+    <tr>
+      <!-- <div class="image-compare">
+                            <img src="./static/images/ts2_input.jpg" alt="" /></img>
+                            <img src="./static/images/ts_har.jpg" alt="" /></img>
+                        </div> -->
+        <td style="text-align:center"><img src="./static/images/ts2_input.jpg" alt="" border=0 height=100 width=300></img></td>
+          <td><img src="./static/images/t.png" alt="" border=0 height=100 width=300></img></th>
+            <td><img src="./static/images/ts2.png" alt="" border=0 height=100 width=300></img></th>
+              <td><img src="./static/images/ts_har.jpg" alt="" border=0 height=100 width=300></img></th>
+    </tr>
+    <tr>
+        <td style="text-align:center"><img src="./static/images/0467_inp.jpg" alt="" border=0 height=100 width=300></img></td>
+          <td><img src="./static/images/m.png" alt="" border=0 height=100 width=300></img></th>
+            <td><img src="./static/images/0467_bg.jpg" alt="" border=0 height=100 width=300></img></th>
+              <td><img src="./static/images/0467_res2.jpg" alt="" border=0 height=100 width=300></img></th>
+    </tr>
 
+     <tr>
+        <td style="text-align:center"><img src="./static/images/0289_inp.jpg" alt="" border=0 height=100 width=300></img></td>
+          <td><img src="./static/images/mss_f.png" alt="" border=0 height=100 width=300></img></th>
+            <td><img src="./static/images/0289_bg.jpg" alt="" border=0 height=100 width=300></img></th>
+              <td><img src="./static/images/0289_res.jpg" alt="" border=0 height=100 width=300></img></th>
+    </tr>
+
+</table>
+  </body>
+  <html>
+<!-- 
 <section class="hero is-light is-small">
   <div class="hero-body">
     <div class="container">
@@ -251,7 +319,7 @@
     </div>
   </div>
 </section>
-
+ -->
 
 <section class="section">
   <div class="container is-max-desktop">
@@ -261,31 +329,23 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            We present the first method capable of photorealistically reconstructing a non-rigidly
-            deforming scene using photos/videos captured casually from mobile phones.
+            We introduce Interactive Harmonization and propose a new
+framework which has the flexibility to solve it achieving realistic portrait harmonization.
           </p>
           <p>
-            Our approach augments neural radiance fields
-            (NeRF) by optimizing an
-            additional continuous volumetric deformation field that warps each observed point into a
-            canonical 5D NeRF.
-            We observe that these NeRF-like deformation fields are prone to local minima, and
-            propose a coarse-to-fine optimization method for coordinate-based models that allows for
-            more robust optimization.
-            By adapting principles from geometry processing and physical simulation to NeRF-like
-            models, we propose an elastic regularization of the deformation field that further
-            improves robustness.
-          </p>
-          <p>
-            We show that <span class="dnerf">Nerfies</span> can turn casually captured selfie
-            photos/videos into deformable NeRF
-            models that allow for photorealistic renderings of the subject from arbitrary
-            viewpoints, which we dub <i>"nerfies"</i>. We evaluate our method by collecting data
-            using a
-            rig with two mobile phones that take time-synchronized photos, yielding train/validation
-            images of the same pose at different viewpoints. We show that our method faithfully
-            reconstructs non-rigidly deforming scenes and reproduces unseen views with high
-            fidelity.
+           Current image harmonization methods consider the entire
+background as the guidance for harmonization. However, this may limit
+the capability for user to choose any specific object/person in the background to guide the harmonization. To enable flexible interaction between user and harmonization, we introduce interactive harmonization,
+a new setting where the harmonization is performed with respect to a
+selected region in the reference image instead of the entire background.
+A new flexible framework that allows users to pick certain regions of the
+background image and use it to guide the harmonization is proposed.
+Inspired by professional portrait harmonization users, we also introduce
+a new luminance matching loss to optimally match the color/luminance
+conditions between the composite foreground and select reference region. This framework provides more control to the image harmonization pipeline achieving visually pleasing portrait edits. Furthermore, we
+also introduce a new dataset carefully curated for validating portrait
+harmonization. Extensive experiments on both synthetic and real-world
+datasets show that the proposed approach is efficient and robust compared to previous harmonization baselines, especially for portraits.
           </p>
         </div>
       </div>
@@ -293,200 +353,150 @@
     <!--/ Abstract. -->
 
     <!-- Paper video. -->
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Video</h2>
-        <div class="publication-video">
-          <iframe src="https://www.youtube.com/embed/MrKrnHhk8IA?rel=0&amp;showinfo=0"
-                  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-        </div>
-      </div>
-    </div>
-    <!--/ Paper video. -->
-  </div>
-</section>
-
-
 <section class="section">
   <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Method</h2>
+        <div class="content has-text-justified">
+          <h5 class="subtitle has-text-centered">
+        Overview of the proposed Interactive Harmonization Framework.
+      </h2>
+        <center>
+            <img src="./static/images/r2r_method.png" alt="" border=0 height=500 width=1500></img></
+          </center>
+          &nbsp; 
+<h5 class="subtitle has-text-centered">
+        Overview of the Luminance Matching Loss.
+      </h2>
+      <center>
+            <img src="./static/images/r2r_lm.png" alt="" border=0 height=500 width=1500></img></
+          </center>
+          
 
-    <div class="columns is-centered">
-
-      <!-- Visual Effects. -->
-      <div class="column">
-        <div class="content">
-          <h2 class="title is-3">Visual Effects</h2>
-          <p>
-            Using <i>nerfies</i> you can create fun visual effects. This Dolly zoom effect
-            would be impossible without nerfies since it would require going through a wall.
-          </p>
-          <video id="dollyzoom" autoplay controls muted loop height="100%">
-            <source src="https://homes.cs.washington.edu/~kpar/nerfies/videos/dollyzoom-stacked.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-      </div>
-      <!--/ Visual Effects. -->
-
-      <!-- Matting. -->
-      <div class="column">
-        <h2 class="title is-3">Matting</h2>
-        <div class="columns is-centered">
-          <div class="column content">
-            <p>
-              As a byproduct of our method, we can also solve the matting problem by ignoring
-              samples that fall outside of a bounding box during rendering.
-            </p>
-            <video id="matting-video" controls height="100%">
-              <source src="https://homes.cs.washington.edu/~kpar/nerfies/videos/matting.mp4"
-                      type="video/mp4">
-            </video>
-          </div>
-
-        </div>
+ </div>
       </div>
     </div>
-    <!--/ Matting. -->
-
-    <!-- Animation. -->
-    <div class="columns is-centered">
-      <div class="column is-full-width">
-        <h2 class="title is-3">Animation</h2>
-
-        <!-- Interpolating. -->
-        <h3 class="title is-4">Interpolating states</h3>
-        <div class="content has-text-justified">
-          <p>
-            We can also animate the scene by interpolating the deformation latent codes of two input
-            frames. Use the slider here to linearly interpolate between the left frame and the right
-            frame.
-          </p>
-        </div>
-        <div class="columns is-vcentered interpolation-panel">
-          <div class="column is-3 has-text-centered">
-            <img src="https://homes.cs.washington.edu/~kpar/nerfies/images/interpolate_start.jpg"
-                 class="interpolation-image"
-                 alt="Interpolate start reference image."/>
-            <p>Start Frame</p>
-          </div>
-          <div class="column interpolation-video-column">
-            <div id="interpolation-image-wrapper">
-              Loading...
-            </div>
-            <input class="slider is-fullwidth is-large is-info"
-                   id="interpolation-slider"
-                   step="1" min="0" max="100" value="0" type="range">
-          </div>
-          <div class="column is-3 has-text-centered">
-            <img src="https://homes.cs.washington.edu/~kpar/nerfies/images/interpolate_end.jpg"
-                 class="interpolation-image"
-                 alt="Interpolation end reference image."/>
-            <p class="is-bold">End Frame</p>
-          </div>
-        </div>
-        <br/>
-        <!--/ Interpolating. -->
-
-        <!-- Re-rendering. -->
-        <h3 class="title is-4">Re-rendering the input video</h3>
-        <div class="content has-text-justified">
-          <p>
-            Using <span class="dnerf">Nerfies</span>, you can re-render a video from a novel
-            viewpoint such as a stabilized camera by playing back the training deformations.
-          </p>
-        </div>
-        <div class="content has-text-centered">
-          <video id="replay-video"
-                 controls
-                 muted
-                 preload
-                 width="75%">
-            <source src="https://homes.cs.washington.edu/~kpar/nerfies/videos/replay.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <!--/ Re-rendering. -->
-
-      </div>
-    </div>
-    <!--/ Animation. -->
-
-
-    <!-- Concurrent Work. -->
-    <div class="columns is-centered">
-      <div class="column is-full-width">
-        <h2 class="title is-3">Related Links</h2>
-
-        <div class="content has-text-justified">
-          <p>
-            There's a lot of excellent work that was introduced around the same time as ours.
-          </p>
-          <p>
-            <a href="https://arxiv.org/abs/2104.09125">Progressive Encoding for Neural Optimization</a> introduces an idea similar to our windowed position encoding for coarse-to-fine optimization.
-          </p>
-          <p>
-            <a href="https://www.albertpumarola.com/research/D-NeRF/index.html">D-NeRF</a> and <a href="https://gvv.mpi-inf.mpg.de/projects/nonrigid_nerf/">NR-NeRF</a>
-            both use deformation fields to model non-rigid scenes.
-          </p>
-          <p>
-            Some works model videos with a NeRF by directly modulating the density, such as <a href="https://video-nerf.github.io/">Video-NeRF</a>, <a href="https://www.cs.cornell.edu/~zl548/NSFF/">NSFF</a>, and <a href="https://neural-3d-video.github.io/">DyNeRF</a>
-          </p>
-          <p>
-            There are probably many more by the time you are reading this. Check out <a href="https://dellaert.github.io/NeRF/">Frank Dellart's survey on recent NeRF papers</a>, and <a href="https://github.com/yenchenlin/awesome-NeRF">Yen-Chen Lin's curated list of NeRF papers</a>.
-          </p>
-        </div>
-      </div>
-    </div>
-    <!--/ Concurrent Work. -->
-
-  </div>
 </section>
 
+<section class="hero">
+  <div class="hero-body">
+
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Results</h2>
+        <div class="content has-text-justified">
+        
+<table border="0" bordercolor="red" align="center">
+<!--     <tr>
+        <th colspan="4">ABCD</th> 
+    </tr> -->
+ <h5 class="subtitle has-text-centered">
+        Slide right to view the harmonized Portrait!
+      </h2>
+    <tr>
+      <!-- <div class="image-compare">
+                            <img src="./static/images/ts2_input.jpg" alt="" /></img>
+                            <img src="./static/images/ts_har.jpg" alt="" /></img>
+                        </div> -->
+        
+          <td>
+                        <div class="image-compare" style="margin-top: 1em;">
+                            <img src="./static/images/0490_cloud_input_input.jpg" alt="" border=0 height="100" width="300"> />
+                            <img src="./static/images/0490_cloud_input_CVPR_fit.jpg" alt="" border=0 height="100" width="300"> />
+                        </div></th>
+
+                        <td>
+                        <div class="image-compare" style="margin-top: 1em;">
+                            <img src="./static/images/0821_cloud_input_input.jpg" alt="" border=0 height=100 width=300> />
+                            <img src="./static/images/0821_cloud_input_CVPR_fit.jpg" alt="" border=0 height=500 width=300> />
+                        </div></th>
+          
+
+    </tr>
+ <tr>
+      <!-- <div class="image-compare">
+                            <img src="./static/images/ts2_input.jpg" alt="" /></img>
+                            <img src="./static/images/ts_har.jpg" alt="" /></img>
+                        </div> -->
+         <td>
+                        <div class="image-compare" style="margin-top: 1em;">
+                            <img src="./static/images/ts1_input.jpg" alt="" border=0 height="100" width="300"> />
+                            <img src="./static/images/ts1_CVPR_fit.jpg" alt="" border=0 height="100" width="300"> />
+                        </div></th>
+           <td>
+                        <div class="image-compare" style="margin-top: 1em;">
+                            <img src="./static/images/0444_0927_cloud_input_input_ccexpress.jpeg" alt="" border=0 height="100" width="300"> />
+                            <img src="./static/images/0444_0927_cloud_input_CVPR_fit_ccexpress.jpeg" alt="" border=0 height="100" width="300"> />
+                        </div></th>
+        
+
+    </tr>
+
+     <tr>
+      <!-- <div class="image-compare">
+                            <img src="./static/images/ts2_input.jpg" alt="" /></img>
+                            <img src="./static/images/ts_har.jpg" alt="" /></img>
+                        </div> -->
+                        <td>
+                        <div class="image-compare" style="margin-top: 1em;">
+                            <img src="./static/images/0701_0927_cloud_input_input.jpg" alt="" border=0 height="100" width="300"> />
+                            <img src="./static/images/0701_0927_cloud_input_CVPR_fit.jpg" alt="" border=0 height="100" width="300"> />
+                        </div></th>
+        
+          <td>
+                        <div class="image-compare" style="margin-top: 1em;">
+                            <img src="./static/images/0257_cloud_input_input.jpg" alt="" border=0 height="100" width="300"> />
+                            <img src="./static/images/0257_cloud_input_CVPR_fit.jpg" alt="" border=0 height="100" width="300"> />
+                        </div></th>
+
+    </tr>
+      
+
+</table>
+ </div>
+      </div>
+    </div>
+     </div>
 
 <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
     <h2 class="title">BibTeX</h2>
-    <pre><code>@article{park2021nerfies,
-  author    = {Park, Keunhong and Sinha, Utkarsh and Barron, Jonathan T. and Bouaziz, Sofien and Goldman, Dan B and Seitz, Steven M. and Martin-Brualla, Ricardo},
-  title     = {Nerfies: Deformable Neural Radiance Fields},
-  journal   = {ICCV},
-  year      = {2021},
-}</code></pre>
+    <pre><code></code></pre>
   </div>
 </section>
 
 
-<footer class="footer">
-  <div class="container">
-    <div class="content has-text-centered">
-      <a class="icon-link"
-         href="https://homes.cs.washington.edu/~kpar/nerfies/videos/nerfies_paper.pdf">
-        <i class="fas fa-file-pdf"></i>
-      </a>
-      <a class="icon-link" href="https://github.com/keunhong" class="external-link" disabled>
-        <i class="fab fa-github"></i>
-      </a>
-    </div>
-    <div class="columns is-centered">
-      <div class="column is-8">
-        <div class="content">
-          <p>
-            This website is licensed under a <a rel="license"
-                                                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
-            Commons Attribution-ShareAlike 4.0 International License</a>.
-          </p>
-          <p>
-            This means you are free to borrow the <a
-              href="https://github.com/nerfies/nerfies.github.io">source code</a> of this website,
-            we just ask that you link back to this page in the footer.
-            Please remember to remove the analytics code included in the header of the website which
-            you do not want on your website.
-          </p>
-        </div>
-      </div>
-    </div>
-  </div>
-</footer>
+<section class="section" >
+  <div class="container is-max-desktop content">
+    <h5 class="title">Website Template taken from <span class="author-block">
+              <a href="https://nerfies.github.io/">Nerfies</a></h5>
 
+  </div>
+</section>
+
+<script>
+    const viewers = document.querySelectorAll(".image-compare");
+    viewers.forEach((element) => {
+        let view = new ImageCompare(element, {
+            hoverStart: true,
+            addCircle: true
+        }).mount();
+    });
+
+    $(document).ready(function () {
+        var editor = CodeMirror.fromTextArea(document.getElementById("bibtex"), {
+            lineNumbers: false,
+            lineWrapping: true,
+            readOnly: true
+        });
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip()
+        })
+    });
+</script>
 </body>
 </html>
